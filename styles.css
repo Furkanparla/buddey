@@ -17,8 +17,10 @@
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -31,11 +33,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .booking-container {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: transparent;
 }
 
 /* Progress Bar Styles */
@@ -146,6 +146,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Step Content Animation */
 .step-content {
+    background: transparent;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
     display: none;
     opacity: 0;
     transform: translateY(20px);
@@ -535,10 +539,10 @@ input:focus, select:focus, textarea:focus {
 
 /* Calendar Styles */
 .calendar-container {
-    background: white;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -640,10 +644,11 @@ input:focus, select:focus, textarea:focus {
 }
 
 .time-slot-option {
-    background: white;
-    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
     overflow: hidden;
-    border: 1px solid #E1E8ED;
     transition: all 0.3s ease;
 }
 
@@ -704,10 +709,10 @@ input:focus, select:focus, textarea:focus {
 
 /* Selected Slots */
 .selected-slots-container {
-    margin-top: 2rem;
-    background: var(--background-color);
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
     padding: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .selected-slots-container h3 {
@@ -1259,4 +1264,16 @@ input[readonly] {
 
 .step-content:nth-child(4) .form-field-container {
     gap: 4px;
+}
+
+/* Zorg ervoor dat de form elementen nog steeds goed zichtbaar zijn */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
 } 
